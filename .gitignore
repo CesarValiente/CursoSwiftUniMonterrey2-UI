@@ -34,3 +34,5 @@ Carthage/Build
 
 # AppCode
 .idea/*
+.idea/
+
