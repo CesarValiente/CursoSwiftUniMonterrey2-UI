@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9515"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="CalculatorImc_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" id="u82-pV-WHb">
+                            <items>
+                                <label width="71.5" height="32.5" alignment="left" text="Weight" id="y4O-ar-wXb"/>
+                                <label width="61.5" height="26.5" alignment="left" text="50" id="xFD-g5-u3q"/>
+                            </items>
+                        </group>
+                        <slider width="1" height="34" alignment="left" value="50" minimum="50" maximum="200" steps="150" id="IMB-Bw-Fzd">
+                            <connections>
+                                <action selector="onWeightSliderChange:" destination="AgC-eL-Hgc" id="rrr-eG-xkp"/>
+                            </connections>
+                        </slider>
+                        <group width="130" alignment="left" id="aJ3-wP-83T">
+                            <items>
+                                <label width="71" height="35.5" alignment="left" text="Height" id="dfh-eH-reE"/>
+                                <label width="63.5" height="29" alignment="left" text="0.5" id="Stj-Fl-EgP"/>
+                            </items>
+                        </group>
+                        <slider width="1" height="28" alignment="left" value="50" minimum="50" maximum="230" steps="180" id="oj3-vN-X5S">
+                            <connections>
+                                <action selector="onHeightSliderChange:" destination="AgC-eL-Hgc" id="HEM-jx-BPv"/>
+                            </connections>
+                        </slider>
+                        <button width="1" alignment="left" title="Calculate" id="1eF-3Q-gVU">
+                            <connections>
+                                <action selector="onCalculateClick" destination="AgC-eL-Hgc" id="TyM-lF-ml8"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="heightStepsLabel" destination="Stj-Fl-EgP" id="2lF-z8-RzL"/>
+                        <outlet property="weightStepsLabel" destination="xFD-g5-u3q" id="0AB-3D-uCJ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="281" y="577.25"/>
+        </scene>
+        <!--imcResult-->
+        <scene sceneID="pdv-Y6-WMM">
+            <objects>
+                <controller identifier="imcResult" id="R2V-H6-dYH" customClass="DetailView" customModule="CalculatorImc_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Your IMC:" id="99h-OZ-nsP"/>
+                        <label alignment="left" id="YNV-Ts-MtF"/>
+                    </items>
+                    <connections>
+                        <outlet property="imcResultLabel" destination="YNV-Ts-MtF" id="xVb-Tl-UgZ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="653" y="578"/>
+        </scene>
+    </scenes>
+</document>
