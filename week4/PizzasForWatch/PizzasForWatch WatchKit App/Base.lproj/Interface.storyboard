@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9515"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="PizzasForWatch_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <picker height="100" alignment="left" verticalAlignment="center" id="cZU-5d-4ne">
+                            <connections>
+                                <action selector="onPizzaSizePickerClick:" destination="AgC-eL-Hgc" id="ezv-7X-iA5"/>
+                            </connections>
+                        </picker>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Aceptar" id="W6k-rt-aSj">
+                            <connections>
+                                <action selector="onAcceptBtnClick" destination="AgC-eL-Hgc" id="KqN-Dp-7mg"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="pizzaSizePicker" destination="cZU-5d-4ne" id="Tdo-Na-h3r"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="565" y="452"/>
+        </scene>
+        <!--body-->
+        <scene sceneID="7NX-2s-tLj">
+            <objects>
+                <controller identifier="body" id="YMH-Yj-mq5" customClass="BodyVC" customModule="PizzasForWatch_WatchKit_Extension">
+                    <items>
+                        <picker height="100" alignment="left" verticalAlignment="center" id="DX2-P0-RUH">
+                            <connections>
+                                <action selector="onPizzaBodyPickerClick:" destination="YMH-Yj-mq5" id="WMD-li-a6V"/>
+                            </connections>
+                        </picker>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Aceptar" id="xxL-8b-tI1">
+                            <connections>
+                                <action selector="onAcceptBtnClick" destination="YMH-Yj-mq5" id="xRg-lb-TGc"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="pizzaBodyPicker" destination="DX2-P0-RUH" id="3Jl-fv-2oG"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="799" y="452"/>
+        </scene>
+        <!--review-->
+        <scene sceneID="Kvl-In-m4V">
+            <objects>
+                <controller identifier="review" id="zAZ-5p-wgT" customClass="ReviewVC" customModule="PizzasForWatch_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Esta es tu pizza! " id="uMj-B4-b4M"/>
+                        <label alignment="left" text="Label" id="Gqt-oI-2rI"/>
+                        <label alignment="left" text="Label" id="okU-mh-AQ7"/>
+                        <label alignment="left" text="Label" id="ufa-UU-e4N"/>
+                        <label alignment="left" text="Label" id="wGT-m2-pRp"/>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Aceptar" id="IsS-YY-cIm">
+                            <connections>
+                                <action selector="onAcceptBtnClick" destination="zAZ-5p-wgT" id="Uim-bj-O37"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="bodyLabel" destination="okU-mh-AQ7" id="bxI-am-n5h"/>
+                        <outlet property="cheeseLabel" destination="ufa-UU-e4N" id="U8T-lQ-8Hi"/>
+                        <outlet property="ingredientsLabel" destination="wGT-m2-pRp" id="o4s-nf-FMU"/>
+                        <outlet property="sizeLabel" destination="Gqt-oI-2rI" id="QcS-aa-Tva"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="903" y="752"/>
+        </scene>
+        <!--confirmation-->
+        <scene sceneID="Q3f-3m-zj5">
+            <objects>
+                <controller identifier="confirmation" id="0hE-Lp-Mc0" customClass="ConfirmationVC" customModule="PizzasForWatch_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="Label" id="iNy-EV-LRe"/>
+                        <label alignment="center" verticalAlignment="center" text="Label" id="cYj-wz-rBh"/>
+                    </items>
+                    <connections>
+                        <outlet property="confirmationLabel" destination="iNy-EV-LRe" id="hBH-aU-TxA"/>
+                        <outlet property="moreInfoLabel" destination="cYj-wz-rBh" id="quV-6s-97Z"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1139" y="750"/>
+        </scene>
+        <!--cheese-->
+        <scene sceneID="Q64-C0-eQU">
+            <objects>
+                <controller identifier="cheese" id="2nV-Ir-TFT" customClass="CheeseVC" customModule="PizzasForWatch_WatchKit_Extension">
+                    <items>
+                        <picker height="100" alignment="left" verticalAlignment="center" id="TD3-Dc-aTR">
+                            <connections>
+                                <action selector="onPizzaCheesePickerClick:" destination="2nV-Ir-TFT" id="W0a-jc-4Oe"/>
+                            </connections>
+                        </picker>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Aceptar" id="x4T-NW-Usy">
+                            <connections>
+                                <action selector="onAcceptBtnClick" destination="2nV-Ir-TFT" id="hCL-N6-zlM"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="pizzaCheesePicker" destination="TD3-Dc-aTR" id="CDN-dz-FnM"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1019" y="452"/>
+        </scene>
+        <!--ingredients-->
+        <scene sceneID="DGl-ey-ivg">
+            <objects>
+                <controller identifier="ingredients" id="gRW-Ub-nb7" customClass="IngredientsVC" customModule="PizzasForWatch_WatchKit_Extension">
+                    <items>
+                        <picker height="100" alignment="left" verticalAlignment="center" id="lT7-HP-UVX">
+                            <connections>
+                                <action selector="onPizzaIngredientsPickerClick:" destination="gRW-Ub-nb7" id="vIo-sb-GJN"/>
+                            </connections>
+                        </picker>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Aceptar" id="eVY-PD-9SY">
+                            <connections>
+                                <action selector="onAcceptBtnClick" destination="gRW-Ub-nb7" id="hfx-yc-M6j"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="pizzaIngredientsPicker" destination="lT7-HP-UVX" id="QxW-Be-5XL"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1225" y="452"/>
+        </scene>
+    </scenes>
+</document>
